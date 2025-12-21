@@ -1,0 +1,355 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #a87101;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* NAVBAR DESKTOP */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #2c1e12;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 50vw;
+        flex-direction: column;
+        background: #2c1e12;
+        text-align: center;
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        padding: 15px 0;
+    }
+}
+
+/* HOME SECTION */
+.home-section {
+    display: flex;
+    text-align: center;
+    background-color: #aa5a0b;
+    padding-top: 200px;
+    padding-bottom: 250px;
+}
+
+.home-content {
+    max-width: 600px;
+    margin: auto;
+    color: #ffffff;
+    margin-left: 25px;
+    text-align: left;
+}
+
+.home-content h1 {
+    font-size: 45px;
+    margin-bottom: 8px;
+}
+
+.home-content p {
+    font-size: 18px;
+    margin-bottom: 7px;
+    line-height: 1.6;
+}
+
+.home-image img {
+    margin-right: 40px;
+    width: 300px;
+}
+
+.home-content .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #fcbe21;
+    color: #33291f;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.home-content .btn:hover {
+    background-color: #ffffff;
+}
+
+/* HOME SECTION RESPONSIVE */
+@media (max-width: 768px) {
+    .home-section {
+        flex-direction: column;
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
+    .home-image img {
+        margin: 20px 0;
+        width: 250px;
+    }
+
+    .home-content h1 {
+        font-size: 32px;
+    }
+
+    .home-section {
+        padding-bottom: 252px;
+    }
+
+}
+
+/* ABOUT SECTION */
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 220px 60px;
+    gap: 40px;
+}
+
+/* TEKS ATAS–BAWAH */
+.about-text {
+    display: flex;
+    flex-direction: column;
+    /* KUNCI */
+    text-align: left;
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.img-about {
+    flex: 1;
+}
+
+.img-about img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    flex: 1;
+    margin-left: 40px;
+}
+
+/* ABOUT SECTION RESPONSIVE */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 100%;
+        margin-top: 30px;
+    }
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 120px 60px;
+    text-align: center;
+    background-color: #6e4012;
+}
+
+.testimonials-section h2 {
+    font-size: 43px;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.testimonials-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.testimonial-item {
+    flex: 1;
+    max-width: 350px;
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.testimonial-item h3 {
+    font-size: 24px;
+    margin: 15px 0 10px;
+    color: #333;
+}
+
+.testimonial-item p {
+    font-size: 16px;
+    color: #8f8f8f;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .testimonials-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .testimonial-item {
+        max-width: 100%;
+    }
+}
+
+/* MENU SECTION */
+
+.menu-section {
+    padding: 120px 60px;
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-size: 43px;
+    margin-bottom: 50px;
+    color: #33291f;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.image-menu {
+    width: 100%;
+    max-width: 270px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Contact Section */
+
+.contact-section {
+    padding: 120px 60px;
+    text-align: center;
+    background-color: #8d5012;
+    color: #fff;
+}
+
+.contact-section h2 {
+    font-size: 43px;
+    margin-bottom: 30px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.contact-section .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #fcbe21;
+    color: #33291f;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section .btn:hover {
+    background-color: #ffffff;
+}
